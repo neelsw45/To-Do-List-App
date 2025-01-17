@@ -1,0 +1,31 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="main" style="margin-top: 50px;">
+    <!-- selction-1 start -->
+        <div class="first-main">
+            <div class="todo-st">
+                <label class="todo-app">TO-DO APP</label>
+            </div>
+            
+    
+        <!-- form start -->
+            <div class="task-form">
+                <form method="post">
+                    {% csrf_token %}
+                    <div>
+                        <input type="text" class="title" name="name" value="{{task.tname}}" ><br>
+                        <input class="desc" name="desc" value="{{task}}" ></input><br>
+                    </div>
+                    
+                    <div class="third" style="margin-left: 37%;" >
+                        <button type="sumbit" class="save-btn" style="height: 50px; width: 200px;">Update</button>
+                    </div>
+ 
+                </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
